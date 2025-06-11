@@ -5,7 +5,7 @@
 
 ```bash
 
-cp -r dev_res/vscode.kk/ ./.vscode/
+cp -r dev_res/vscode.kk ./.vscode
 
 ```
 
