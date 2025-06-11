@@ -6,8 +6,8 @@ cd $(git rev-parse --show-toplevel)
 cd src
 
 
-export SOHOV4_API_PORT=$(python3 -c "from sohov4.central_config import dfcc; print(dfcc.api_port)")
-export SOHOV4_API_HOST=$(python3 -c "from sohov4.central_config import dfcc; print(dfcc.api_host)")
+export SOHOV4_API_PORT=$(python3 -c "from sohov4.central_config import dfcc; print(dfcc().api_port)")
+export SOHOV4_API_HOST=$(python3 -c "from sohov4.central_config import dfcc; print(dfcc().api_host)")
 
 printf "Starting Uvicorn server at http://$SOHOV4_API_HOST:$SOHOV4_API_PORT\n\n"
 
