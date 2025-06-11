@@ -25,6 +25,15 @@ class CentralConfig:
 
 
 # ------------------------------------------------------------------------------------------------------------------------------
-# ------------------------------------------------------------------------------------------------------------------------------
-# create default cc lazily at import.
-dfcc = CentralConfig()
+# ------------------------------------------------------------------------------------------------------------------- default cc
+# create default cc lazily as needed
+_default_cc: CentralConfig | None = None
+
+
+def dfcc() -> CentralConfig:
+    """ Get the default central config. """
+
+    global _default_cc
+    if _default_cc is None:
+        _default_cc = CentralConfig()
+    return _default_cc
