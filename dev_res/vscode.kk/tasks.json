@@ -134,6 +134,24 @@
                 "clear": false
             },
             "problemMatcher": []
+        },
+        // ---------------------------------------------------------------------------------------------------------------------
+        // ---------------------------------------------------------------------------------------------------------------------
+        {
+            "label": "xk2: show routes",
+            "type": "process",
+            "command": "pipenv",
+            "args": [
+                "run",
+                "python3",
+                "${workspaceFolder}/scriptz/show_routes.py"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "clear": true
+            },
+            "problemMatcher": []
         }
     ]
 }
